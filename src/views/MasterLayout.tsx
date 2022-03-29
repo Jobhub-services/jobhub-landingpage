@@ -1,20 +1,34 @@
-import { FC } from "react"
+import React, { FC, useRef, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
+import Footer from '@/components/shared/Footer';
+import Header from '@/components/shared/Header';
 const StyledHomeView = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-    width:100%;
-    height:100%;
-`
-const MasterLayout: FC = () => {
-    return (
-        <StyledHomeView>
-            <Outlet />
-        </StyledHomeView>
-    )
-}
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+`;
+export const MasterLayoutContext = React.createContext(false);
 
-export default MasterLayout
+const MasterLayout: FC = () => {
+	const [scrollStart, setScrollStart] = useState(false);
+	const handleScroll = (e) => {
+		const scrollElement: HTMLElement = e.target;
+		const scrollTop = scrollElement.scrollTop;
+		if (scrollTop > 50 && !scrollStart) setScrollStart(true);
+		else if (scrollTop < 50 && scrollStart) setScrollStart(false);
+	};
+	return (
+		<MasterLayoutContext.Provider value={scrollStart}>
+			<StyledHomeView onScroll={handleScroll}>
+				<Header />
+				<Outlet />
+				<Footer />
+			</StyledHomeView>
+		</MasterLayoutContext.Provider>
+	);
+};
+
+export default MasterLayout;

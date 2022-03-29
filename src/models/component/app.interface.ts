@@ -1,17 +1,21 @@
-import { CSSProperties } from "styled-components"
+import { CSSProperties } from 'styled-components';
 
+export interface IconProps {
+	size?: number;
+	color?: string;
+}
 
 export interface AppProps {
-    basename: string
+	basename: string;
 }
 
 export type StandardProps = {
-    className?: string,
-    style?: CSSProperties,
-    children?: React.ReactNode
-}
+	className?: string;
+	style?: CSSProperties;
+	children?: React.ReactNode;
+};
 
 export interface LogoProps extends StandardProps {
-    link?: string,
-    src?: string
+	link?: string;
+	src?: string;
 }
