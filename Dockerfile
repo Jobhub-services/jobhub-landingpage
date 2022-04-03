@@ -6,8 +6,9 @@ WORKDIR /staak-landing
 
 ENV PORT=$port
 RUN npm install
-RUN npm install -g vite
+RUN npm install -g serve
+RUN npm run build:prod
 
 EXPOSE $PORT
 
-CMD npm run serve --port $PORT
+CMD serve dist -p $PORT
