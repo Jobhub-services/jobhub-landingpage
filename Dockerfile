@@ -5,7 +5,6 @@ COPY . /staak-landing
 WORKDIR /staak-landing
 
 ENV PORT=$port
-
 RUN npm install
 RUN npm install -g vite
 
