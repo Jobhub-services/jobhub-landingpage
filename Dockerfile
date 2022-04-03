@@ -1,0 +1,14 @@
+FROM node:14.15.4-alpine
+ARG port
+USER root
+COPY . /staak-landing
+WORKDIR /staak-landing
+
+ENV PORT=$port
+
+RUN npm install
+RUN npm install -g vite
+
+EXPOSE $PORT
+
+CMD npm run serve --port $PORT
