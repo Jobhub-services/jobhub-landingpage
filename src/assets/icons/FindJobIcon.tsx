@@ -29,7 +29,7 @@ const FindJobIcon = ({ size }: IconProps) => {
 				</linearGradient>
 				<radialGradient cx="131.60231" cy="131.51325" r="35.11556" gradientUnits="userSpaceOnUse" id="find-job-color-4">
 					<stop offset="0.627" stopColor="#000000"></stop>
-					<stop offset="1" stopColor="#000000" stop-opacity="0"></stop>
+					<stop offset="1" stopColor="#000000" stopOpacity="0"></stop>
 				</radialGradient>
 				<radialGradient cx="131.85525" cy="131.9835" r="34.91962" gradientUnits="userSpaceOnUse" id="find-job-color-5">
 					<stop offset="0.693" stopColor="#006185"></stop>

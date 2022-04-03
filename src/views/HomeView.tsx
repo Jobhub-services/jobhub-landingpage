@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import HeadPage from '@/components/HomePage/HeadPage';
 import Services from '@/components/HomePage/Services';
 import Features from '@/components/HomePage/Features';

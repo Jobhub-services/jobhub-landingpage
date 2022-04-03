@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { DropDownItem, FlexBox } from 'staak-ui';
 import styled, { css } from 'styled-components';
 
