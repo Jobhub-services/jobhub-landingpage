@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { defineConfig, loadEnv } from 'vite';
 import * as path from 'path';
 import react from '@vitejs/plugin-react';
