@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import Footer from '@/components/shared/Footer';

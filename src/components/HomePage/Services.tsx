@@ -1,6 +1,9 @@
-import { colors } from '@/assets/theme';
 import { FlexBox } from 'staak-ui';
 import styled from 'styled-components';
+import { colors } from '@/assets/theme';
+import JobIcon from '@/assets/icons/JobIcon';
+import IconHalfTime from '@/assets/icons/IconHalfTime';
+import IconDeveloper from '@/assets/icons/IconDeveloper';
 
 const ServiceContainer = styled.div`
 	position: relative;
@@ -26,9 +29,14 @@ const CardService = styled(FlexBox)`
 	padding: 10px 20px;
 	text-align: center;
 `;
-const CardImage = styled.img`
-	height: 190px;
-	margin-bottom: 20px;
+const CardIcon = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	width: 90px;
+	height: 90px;
+	background: ${colors.PURPLE_BASE};
 `;
 
 const CardTitle = styled.h3`
@@ -40,30 +48,32 @@ const CardBody = styled.p``;
 const Services = () => {
 	return (
 		<ServiceContainer>
-			<ContainerTitle>Hire the talents that meet the company's needs with the world's leading recruiting platform.</ContainerTitle>
+			<ContainerTitle>Hire talents that meet your company's needs with the world's leading recruitment platform</ContainerTitle>
 			<FlexBox>
 				<CardService flexDirection="column">
-					<CardImage src="assets/img/home/post-job.svg" />
+					<CardIcon>
+						<JobIcon size={50} color="#ffffff" />
+					</CardIcon>
 					<CardTitle>Post a job and hire a professional</CardTitle>
 					<CardBody>
-						Create a job post in minutes to tap into a network of over 770 million professionals. Share that you're hiring, with your network and
-						beyond.
+						Staak will help you to create job in one minute and receive a thousand of application from professionals around the world.
 					</CardBody>
 				</CardService>
 				<CardService flexDirection="column">
-					<CardImage src="assets/img/home/job-time.svg" />
+					<CardIcon>
+						<IconHalfTime size={50} color="#ffffff" />
+					</CardIcon>
 					<CardTitle>Hire the best candidate in half the time</CardTitle>
-					<CardBody>
-						Create a job post in minutes to tap into a network of over 770 million professionals. Share that you're hiring, with your network and
-						beyond.
-					</CardBody>
+					<CardBody>Hiring process with staak is easy and fast , and you can hire the best candidate in only one click.</CardBody>
 				</CardService>
 				<CardService flexDirection="column">
-					<CardImage src="assets/img/home/developer-job.svg" />
+					<CardIcon>
+						<IconDeveloper size={50} color="#ffffff" />
+					</CardIcon>
 					<CardTitle>Browse talents and find the right candidates</CardTitle>
 					<CardBody>
-						Create a job post in minutes to tap into a network of over 770 million professionals. Share that you're hiring, with your network and
-						beyond.
+						Browser list of talents and find the right talent who fit your requirement and you can create direct communication all of this is
+						available in steak
 					</CardBody>
 				</CardService>
 			</FlexBox>
