@@ -34,6 +34,7 @@ const CardIcon = styled.div`
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
+	margin-bottom: 10px;
 	width: 90px;
 	height: 90px;
 	background: ${colors.PURPLE_BASE};

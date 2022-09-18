@@ -1,7 +1,9 @@
-import { Input, Button } from 'staak-ui';
-import styled from 'styled-components';
-import { colors } from '@/assets/theme';
 import { useState } from 'react';
+import styled from 'styled-components';
+import { Input, Button } from 'staak-ui';
+import { colors } from '@/assets/theme';
+import { actions as AppActions } from '@/modules/actions/app.actions';
+
 const Container = styled.div`
 	position: relative;
 	display: flex;
@@ -41,13 +43,18 @@ const SubmitButton = styled(Button)`
 
 const Newsletter = () => {
 	const [email, setEmail] = useState('');
+	const [isSubmiting, setIsSubmiting] = useState(false);
 
 	const handleChangeEmail = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const value = event.target.value;
 		setEmail(value);
 	};
 	function handleSubscribe() {
-		alert(email);
+		if (!email) return;
+		setIsSubmiting(true);
+		AppActions.subscribeToNewsletter(email).finally(() => {
+			setIsSubmiting(false);
+		});
 	}
 	return (
 		<Container>
@@ -59,8 +66,18 @@ const Newsletter = () => {
 			</div>
 			<ContactFormStyled>
 				<LabelEmailStyled>Professional email</LabelEmailStyled>
-				<Input onChange={handleChangeEmail} width="100%" name="Professional email" type="email" placeholder="Professional email" value={email} />
-				<SubmitButton onClick={handleSubscribe}>Subscribe now</SubmitButton>
+				<Input
+					onChange={handleChangeEmail}
+					disabled={isSubmiting}
+					width="100%"
+					name="Professional email"
+					type="email"
+					placeholder="Professional email"
+					value={email}
+				/>
+				<SubmitButton disabled={isSubmiting} onClick={handleSubscribe}>
+					Subscribe now
+				</SubmitButton>
 			</ContactFormStyled>
 		</Container>
 	);

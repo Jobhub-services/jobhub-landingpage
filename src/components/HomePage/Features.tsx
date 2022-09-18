@@ -2,9 +2,10 @@ import FindJobIcon from '@/assets/icons/FindJobIcon';
 import GroupPersonsIcon from '@/assets/icons/GroupPersonsIcon';
 import SandboxIcon from '@/assets/icons/SandboxIcon';
 import { colors } from '@/assets/theme';
-import { JoinButton } from '@/components/shared/AuthButtons';
-import { FlexBox } from 'staak-ui';
+import { FlexBox, Button } from 'staak-ui';
 import styled from 'styled-components';
+
+const { STAAK_URL } = STAAK_ENV;
 
 const FeatureContainer = styled.div`
 	padding: 6em 0px;
@@ -55,7 +56,9 @@ const Features = () => {
 						You are not able to find jobs , or you can't find the right developer staak is here to help you to pass your business to the next level by
 						hiring the best developers in the world
 					</BodyStyled>
-					<JoinButton>Join Staak now</JoinButton>
+					<a href={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
+						<Button>Join Staak now</Button>
+					</a>
 				</ContentStyled>
 			</ContainerStyled>
 			<ContainerCard>
