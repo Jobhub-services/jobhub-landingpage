@@ -2,9 +2,10 @@ import FindJobIcon from '@/assets/icons/FindJobIcon';
 import GroupPersonsIcon from '@/assets/icons/GroupPersonsIcon';
 import SandboxIcon from '@/assets/icons/SandboxIcon';
 import { colors } from '@/assets/theme';
-import { JoinButton } from '@/components/shared/AuthButtons';
-import { FlexBox } from 'staak-ui';
+import { FlexBox, Button } from 'staak-ui';
 import styled from 'styled-components';
+
+const { STAAK_URL } = STAAK_ENV;
 
 const FeatureContainer = styled.div`
 	padding: 6em 0px;
@@ -50,12 +51,14 @@ const Features = () => {
 			<ContainerStyled justify="space-between">
 				<img src="assets/img/home/carrer_icon.svg" alt="" width={750} />
 				<ContentStyled>
-					<TitleStyled>Take your career or business to new heights.</TitleStyled>
+					<TitleStyled>Take your career or business to new heights</TitleStyled>
 					<BodyStyled>
 						You are not able to find jobs , or you can't find the right developer staak is here to help you to pass your business to the next level by
-						hiring the best developers in the world.
+						hiring the best developers in the world
 					</BodyStyled>
-					<JoinButton>Join Staak now</JoinButton>
+					<a href={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
+						<Button>Join Staak now</Button>
+					</a>
 				</ContentStyled>
 			</ContainerStyled>
 			<ContainerCard>
@@ -63,24 +66,23 @@ const Features = () => {
 					<FindJobIcon size={60} />
 					<CardTitle>Find opportunities</CardTitle>
 					<CardDescription>
-						Create a job post in minutes to tap into a network of over 770 million professionals. Share that you're hiring, with your network and
-						beyond
+						Create a job post in minutes or explore an opening from interesting companies seeking to grow their team and community!
 					</CardDescription>
 				</FeatureCard>
 				<FeatureCard>
 					<SandboxIcon size={60} />
 					<CardTitle>Improve your skills</CardTitle>
 					<CardDescription>
-						Create a job post in minutes to tap into a network of over 770 million professionals. Share that you're hiring, with your network and
-						beyond.
+						Join a company and start growing your skills by facing new challenges and problems you have to solve. We never stop learning from new
+						experiences!
 					</CardDescription>
 				</FeatureCard>
 				<FeatureCard>
 					<GroupPersonsIcon size={60} />
 					<CardTitle>Join best companies</CardTitle>
 					<CardDescription>
-						Create a job post in minutes to tap into a network of over 770 million professionals. Share that you're hiring, with your network and
-						beyond.
+						Companies with passion and eager to scale, grow and innovate are the companies you can find here! So explore the opportunities and choose
+						the one most suitable for you!
 					</CardDescription>
 				</FeatureCard>
 			</ContainerCard>

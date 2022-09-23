@@ -1,10 +1,10 @@
-import CandidateIcon from '@/assets/icons/CandidateIcon';
+import { FlexBox } from 'staak-ui';
+import styled from 'styled-components';
+/*import CandidateIcon from '@/assets/icons/CandidateIcon';
 import GroupPersonsIcon from '@/assets/icons/GroupPersonsIcon';
 import HireIcon from '@/assets/icons/HireIcon';
 import TestIcon from '@/assets/icons/TestIcon';
-import { colors } from '@/assets/theme';
-import { FlexBox } from 'staak-ui';
-import styled from 'styled-components';
+import { colors } from '@/assets/theme';*/
 
 const ContainerStyled = styled(FlexBox)`
 	padding: 6em 0;
@@ -20,7 +20,7 @@ const SubTitleSection = styled.p`
 	font-size: 1.1em;
 	margin-bottom: 40px;
 `;
-
+/*
 const CardStyled = styled(FlexBox)`
 	margin-bottom: 25px;
 	color: ${colors.BLACK_3};
@@ -34,7 +34,7 @@ const CardValue = styled.h1`
 `;
 const CardLabel = styled.h4`
 	margin: 0;
-`;
+`;*/
 const Statistics = () => {
 	return (
 		<ContainerStyled>
@@ -42,9 +42,11 @@ const Statistics = () => {
 			<SectionContent>
 				<TitleSection>Where great companies hire great people.</TitleSection>
 				<SubTitleSection>
-					Since 2012, the world's best companies have depended on Workable to find and hire the people they depend on.
+					Staak is the company where hiring and finding Jobs will be easy in the arab world, we are buidling solid and great software to make all
+					companies and start-up in the arabic world find the right talent, and staak also provide great experience to talents to find thier dream
+					company
 				</SubTitleSection>
-				<CardStyled justify="flex-start">
+				{/*<CardStyled justify="flex-start">
 					<GroupPersonsIcon size={48} />
 					<CardSDetailStyled>
 						<CardValue>10,000</CardValue>
@@ -71,7 +73,7 @@ const Statistics = () => {
 						<CardValue>2000</CardValue>
 						<CardLabel>ASSESMENTS</CardLabel>
 					</CardSDetailStyled>
-				</CardStyled>
+				</CardStyled>*/}
 			</SectionContent>
 		</ContainerStyled>
 	);

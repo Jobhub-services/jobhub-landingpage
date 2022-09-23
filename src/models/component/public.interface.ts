@@ -1,10 +1,6 @@
 import { TypeAttributes } from '@/types';
 import { StandardProps } from '@/models/component/app.interface';
 
-export interface SectionProps extends StandardProps {
-	width?: string;
-}
-
 export interface InfoCardProps extends StandardProps {
 	children?: JSX.Element | JSX.Element[];
 	titleSize?: TypeAttributes.Size;
@@ -18,6 +14,7 @@ export interface InfoCardProps extends StandardProps {
 	src?: string | undefined;
 	icon?: React.ReactNode;
 }
+
 export interface AvatarCardProps extends StandardProps {
 	children?: JSX.Element | JSX.Element[];
 	src?: string | undefined;
@@ -34,6 +31,7 @@ export interface AvatarCardItemProps extends StandardProps {
 	marginBottom?: string;
 	color?: TypeAttributes.Color;
 }
+
 export interface CarouselProps extends StandardProps {
 	children?: JSX.Element | JSX.Element[];
 	active?: boolean;

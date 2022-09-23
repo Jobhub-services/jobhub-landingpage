@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { colors } from '@/assets/theme';
-import { FlexBox, LinkTag } from 'staak-ui';
+import { FlexBox, LinkTag, Button } from 'staak-ui';
 import { FaceBookIcon, TwitterIcon, InstagramIcon, LinkedinIcon } from 'staak-ui';
 import StaakLogo from '@/assets/theme/StaakLogo';
 import { VariantType } from '@/models/theme/staakLogo.interface';
-import { JoinButton, LoginButton } from '@/components/shared/AuthButtons';
 import { Link } from 'react-router-dom';
+import { FACEBOOK_PAGE_URL, INSTAGRAM_PAGE_URL, LINKEDIN_PAGE_URL, TWITTER_PAGE_URL } from '@/constants/app.constants';
+
+const { STAAK_URL } = STAAK_ENV;
 
 const StyledDiv = styled(FlexBox)`
 	padding-top: 3em;
@@ -50,52 +52,48 @@ const Footer = () => {
 						<FlexBox flexDirection="column" align="flex-start" height="350px" justify="space-between">
 							<StaakLogo variant={VariantType.LIGHT} size={130} />
 							<FlexBox justify="space-between">
-								<LoginButton noBg={true} color="white" variant="text" />
-								<JoinButton noBg={true} color="white" variant="outlined" />
+								<a target="_blank" href={`${STAAK_URL}/register/company`} style={{ marginRight: '15px' }} rel="noreferrer">
+									<Button color="white" variant="outlined">
+										Start Hiring
+									</Button>
+								</a>
+								<a target="_blank" href={`${STAAK_URL}/register/developer`} rel="noreferrer">
+									<Button>Join Staak & Code</Button>
+								</a>
 							</FlexBox>
 						</FlexBox>
 						<FlexBox flexDirection="column" align="flex-start">
-							<H1Styled>Companies</H1Styled>
+							<H1Styled>For Companies</H1Styled>
 							<FlexBox flexDirection="column" align="flex-start">
-								<LinkTag>Source & Attract</LinkTag>
-								<LinkTag>Language options</LinkTag>
-								<LinkTag>Careers pages</LinkTag>
-								<LinkTag>Source & Attract</LinkTag>
-								<LinkTag>Source & Attract</LinkTag>
-								<LinkTag>Source & Attract</LinkTag>
+								<LinkTag>Post jobs</LinkTag>
+								<LinkTag>Browser talents</LinkTag>
+								<LinkTag>Contact talents</LinkTag>
+								<LinkTag>Track applications</LinkTag>
+								<LinkTag>Customize profile</LinkTag>
 							</FlexBox>
 						</FlexBox>
 						<FlexBox flexDirection="column" align="flex-start">
-							<H1Styled>Developers</H1Styled>
+							<H1Styled>For Developers</H1Styled>
 							<FlexBox flexDirection="column" align="flex-start">
-								<LinkTag>Video Interviews</LinkTag>
-								<LinkTag>Source & Attract</LinkTag>
-								<LinkTag>Source & Attract</LinkTag>
-								<LinkTag>Source & Attract</LinkTag>
-								<LinkTag>Source & Attract</LinkTag>
+								<LinkTag>Browser companies</LinkTag>
+								<LinkTag>Browser jobs</LinkTag>
+								<LinkTag>Easy application</LinkTag>
+								<LinkTag>Customize profile</LinkTag>
 							</FlexBox>
 						</FlexBox>
 						<FlexBox flexDirection="column" align="flex-start">
-							<H1Styled>Features</H1Styled>
+							<H1Styled>For us</H1Styled>
 							<FlexBox flexDirection="column" align="flex-start">
-								<LinkTag>Help & Support</LinkTag>
-								<LinkTag>Applicant Tracking</LinkTag>
-								<LinkTag>Hiring Tutoriels</LinkTag>
-								<LinkTag>Job Description</LinkTag>
-								<LinkTag>Blog</LinkTag>
-								<LinkTag>Community</LinkTag>
-								<LinkTag>Affiliate Program</LinkTag>
-								<LinkTag>Source & Attract</LinkTag>
-							</FlexBox>
-						</FlexBox>
-						<FlexBox flexDirection="column" align="flex-start">
-							<H1Styled>Company</H1Styled>
-							<FlexBox flexDirection="column" align="flex-start">
-								<LinkTag>Contact</LinkTag>
-								<LinkTag>BackStage</LinkTag>
-								<LinkTag>Careers</LinkTag>
-								<LinkTag>Press</LinkTag>
-								<LinkTag>About</LinkTag>
+								<Link to="/contact-us">
+									<LinkTag>Contact us</LinkTag>
+								</Link>
+
+								<Link to="/about">
+									<LinkTag>About us</LinkTag>
+								</Link>
+								<a href={`${STAAK_URL}/login`} target="_blank" rel="noreferrer">
+									<LinkTag>Join us</LinkTag>
+								</a>
 							</FlexBox>
 						</FlexBox>
 					</FlexBox>
@@ -107,18 +105,26 @@ const Footer = () => {
 							<span>Europe & Rest of World: +44 203 826 8149</span>
 						</div>
 						<FlexBox justify="space-between">
-							<StyledIcon>
-								<FaceBookIcon color="white" width="28px" />
-							</StyledIcon>
-							<StyledIcon>
-								<InstagramIcon color="white" width="28px" />
-							</StyledIcon>
-							<StyledIcon>
-								<LinkedinIcon color="white" width="28px" />
-							</StyledIcon>
-							<StyledIcon>
-								<TwitterIcon color="white" width="28px" />
-							</StyledIcon>
+							<a href={FACEBOOK_PAGE_URL} target="_blank" rel="noreferrer">
+								<StyledIcon>
+									<FaceBookIcon color="white" width="28px" />
+								</StyledIcon>
+							</a>
+							<a href={INSTAGRAM_PAGE_URL} target="_blank" rel="noreferrer">
+								<StyledIcon>
+									<InstagramIcon color="white" width="28px" />
+								</StyledIcon>
+							</a>
+							<a href={LINKEDIN_PAGE_URL} target="_blank" rel="noreferrer">
+								<StyledIcon>
+									<LinkedinIcon color="white" width="28px" />
+								</StyledIcon>
+							</a>
+							<a href={TWITTER_PAGE_URL} target="_blank" rel="noreferrer">
+								<StyledIcon>
+									<TwitterIcon color="white" width="28px" />
+								</StyledIcon>
+							</a>
 						</FlexBox>
 					</StyledFlexBox>
 				</FlexBox>

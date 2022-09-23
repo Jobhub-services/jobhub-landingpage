@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { Button, FlexBox, Headline } from 'staak-ui';
+import { FlexBox, Button } from 'staak-ui';
 import { colors } from '@/assets/theme';
 import WaveBg from '@/components/HomePage/WaveBg';
 import styled from 'styled-components';
-import { JoinButton } from '../shared/AuthButtons';
+
+const { STAAK_URL } = STAAK_ENV;
 
 const Container = styled.div`
 	position: relative;
@@ -15,7 +16,7 @@ const HeadPageStyled = styled.div`
 	position: relative;
 	z-index: 1;
 	width: 85%;
-	margin: 0 auto 500px auto;
+	margin: 0 auto 430px auto;
 	color: ${colors.WHITE};
 `;
 const TitleStyled = styled.h1`
@@ -37,17 +38,20 @@ const HeadPage: FC = () => {
 			<HeadPageStyled>
 				<FlexBox justify="space-between" style={{ height: '450px' }}>
 					<SubContainer>
-						<TitleStyled>Hire with the best and easier recruiting software</TitleStyled>
+						<TitleStyled>Hire the best using an efficient recruiting software</TitleStyled>
 						<BlockBodyStyled>
-							You're an employer in need of top-notch talent, or a developer looking for work , staak is your best software to get matched
+							Staak the easiest way to recruit software developers If you're an employer in need of top-notch talent? Or a developer looking for work?
+							Staak is your best software to get matched
 						</BlockBodyStyled>
 						<FlexBox justify="flex-start">
-							<JoinButton variant="contained" style={{ marginRight: '10px' }}>
-								Start Hiring
-							</JoinButton>
-							<JoinButton color="white" variant="outlined">
-								Join Staak & Code
-							</JoinButton>
+							<a target="_blank" href={`${STAAK_URL}/register/company`} style={{ marginRight: '15px' }} rel="noreferrer">
+								<Button color="white" variant="outlined">
+									Start Hiring
+								</Button>
+							</a>
+							<a target="_blank" href={`${STAAK_URL}/register/developer`} rel="noreferrer">
+								<Button color="white">Join Staak & Code</Button>
+							</a>
 						</FlexBox>
 					</SubContainer>
 					<img src="assets/img/home/head-page-icon.svg" alt="" width={600} />
