@@ -1,5 +1,11 @@
 import { CSSProperties } from 'styled-components';
 
+export interface PIconProps {
+	width?: string;
+	height?: string;
+	color?: string;
+}
+
 export interface IconProps {
 	size?: number;
 	color?: string;
