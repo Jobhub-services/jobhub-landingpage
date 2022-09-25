@@ -9,7 +9,7 @@ const RContainer = styled.div`
 	background-color: white;
 	border-radius: 8px;
 	padding: 15px 20px;
-	width: 47%;
+	width: 55%;
 	color: ${colors.BLACK_2};
 	box-shadow: 0px 0px 20px -10px ${colors.PURPLE_1};
 `;

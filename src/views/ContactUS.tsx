@@ -25,7 +25,7 @@ const MainContainer = styled(FlexBox)`
 	height: 690px;
 `;
 const LContainer = styled(FlexBox)`
-	width: 53%;
+	width: 45%;
 `;
 const StyledIcon = styled.span`
 	cursor: pointer;
