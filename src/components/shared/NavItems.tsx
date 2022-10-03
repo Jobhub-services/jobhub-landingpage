@@ -30,10 +30,10 @@ const NavItems = ({ isLight }: NavProps) => {
 			<LinkStyled href={`${STAAK_URL}/public/jobs`} target="_blank" rel="noreferrer">
 				<DropDownItem size="md">Browse Jobs</DropDownItem>
 			</LinkStyled>
-			<LinkStyled href={`${STAAK_URL}/register/developer`} target="_blank" rel="noreferrer">
+			<LinkStyled href={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
 				<DropDownItem size="md">Find Talent</DropDownItem>
 			</LinkStyled>
-			<LinkStyled href={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
+			<LinkStyled href={`${STAAK_URL}/register/developer`} target="_blank" rel="noreferrer">
 				<DropDownItem size="md">Find Company</DropDownItem>
 			</LinkStyled>
 			{/*<Link to="/about" style={{ marginRight: 10 }}>
