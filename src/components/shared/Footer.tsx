@@ -73,7 +73,7 @@ const Footer = () => {
 							</FlexBox>
 						</FlexBox>
 						<FlexBox flexDirection="column" align="flex-start">
-							<H1Styled>For Developers</H1Styled>
+							<H1Styled>For Talents</H1Styled>
 							<FlexBox flexDirection="column" align="flex-start">
 								<LinkTag>Browser companies</LinkTag>
 								<LinkTag>Browser jobs</LinkTag>

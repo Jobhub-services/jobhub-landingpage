@@ -1,3 +1,9 @@
-export default function WhyPage(props) {
-	return <div></div>;
-}
+const WhyPage = (props) => {
+	return (
+		<div>
+			<div></div>
+		</div>
+	);
+};
+
+export default WhyPage;
