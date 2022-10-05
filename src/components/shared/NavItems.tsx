@@ -36,9 +36,9 @@ const NavItems = ({ isLight }: NavProps) => {
 			<LinkStyled href={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
 				<DropDownItem size="md">Find Company</DropDownItem>
 			</LinkStyled>
-			<Link to="/about" style={{ marginRight: 10 }}>
+			{/*<Link to="/about" style={{ marginRight: 10 }}>
 				<DropDownItem size="md">About</DropDownItem>
-			</Link>
+	</Link>*/}
 			<Link to="/contact-us">
 				<DropDownItem size="md">Contact us</DropDownItem>
 			</Link>

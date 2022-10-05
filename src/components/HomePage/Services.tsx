@@ -55,7 +55,7 @@ const Services = () => {
 					<CardIcon>
 						<JobIcon size={50} color="#ffffff" />
 					</CardIcon>
-					<CardTitle>Post a job and hire a professional</CardTitle>
+					<CardTitle>Spend less time worrying about finding the perfect candidate</CardTitle>
 					<CardBody>
 						Staak will help you to create job in one minute and receive a thousand of application from professionals around the world.
 					</CardBody>
@@ -64,17 +64,16 @@ const Services = () => {
 					<CardIcon>
 						<IconHalfTime size={50} color="#ffffff" />
 					</CardIcon>
-					<CardTitle>Hire the best candidate in half the time</CardTitle>
-					<CardBody>Hiring process with staak is easy and fast , and you can hire the best candidate in only one click.</CardBody>
+					<CardTitle>Hire efficiently and effectively</CardTitle>
+					<CardBody>Hiring process with Staak is easy and fast , and you can hire the best candidate in only one click.</CardBody>
 				</CardService>
 				<CardService flexDirection="column">
 					<CardIcon>
 						<IconDeveloper size={50} color="#ffffff" />
 					</CardIcon>
-					<CardTitle>Browse talents and find the right candidates</CardTitle>
+					<CardTitle>Get access to the right talents</CardTitle>
 					<CardBody>
-						Browser list of talents and find the right talent who fit your requirement and you can create direct communication all of this is
-						available in steak
+						You can find the right talent for your requirements by browsing our pool of available professionals and have direct access to the talent
 					</CardBody>
 				</CardService>
 			</FlexBox>

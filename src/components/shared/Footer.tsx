@@ -5,7 +5,7 @@ import { FaceBookIcon, TwitterIcon, InstagramIcon, LinkedinIcon } from 'staak-ui
 import StaakLogo from '@/assets/theme/StaakLogo';
 import { VariantType } from '@/models/theme/staakLogo.interface';
 import { Link } from 'react-router-dom';
-import { FACEBOOK_PAGE_URL, INSTAGRAM_PAGE_URL, LINKEDIN_PAGE_URL, TWITTER_PAGE_URL } from '@/constants/app.constants';
+import { FACEBOOK_PAGE_URL, INSTAGRAM_PAGE_URL, LINKEDIN_PAGE_URL, STAAK_ADDRESS, STAAK_NUMBER, TWITTER_PAGE_URL } from '@/constants/app.constants';
 
 const { STAAK_URL } = STAAK_ENV;
 
@@ -88,9 +88,9 @@ const Footer = () => {
 									<LinkTag>Contact us</LinkTag>
 								</Link>
 
-								<Link to="/about">
+								{/*<Link to="/about">
 									<LinkTag>About us</LinkTag>
-								</Link>
+	</Link>*/}
 								<a href={`${STAAK_URL}/login`} target="_blank" rel="noreferrer">
 									<LinkTag>Join us</LinkTag>
 								</a>
@@ -100,9 +100,9 @@ const Footer = () => {
 					<StyledDivider />
 					<StyledFlexBox justify="space-between">
 						<div>
-							<span>Bahrain: +1 857 990 9675</span>
+							<span>Bahrain: {STAAK_NUMBER}</span>
 							<br />
-							<span>Europe & Rest of World: +44 203 826 8149</span>
+							<span>{STAAK_ADDRESS}</span>
 						</div>
 						<FlexBox justify="space-between">
 							<a href={FACEBOOK_PAGE_URL} target="_blank" rel="noreferrer">

@@ -38,10 +38,10 @@ const HeadPage: FC = () => {
 			<HeadPageStyled>
 				<FlexBox justify="space-between" style={{ height: '450px' }}>
 					<SubContainer>
-						<TitleStyled>Hire the best using an efficient recruiting software</TitleStyled>
+						<TitleStyled>Find your next development talent on Staak</TitleStyled>
 						<BlockBodyStyled>
-							Staak the easiest way to recruit software developers If you're an employer in need of top-notch talent? Or a developer looking for work?
-							Staak is your best software to get matched
+							Staak the easiest way to recruit software developers If you're an employer in need of top-notch talent? Or a job seeker looking for
+							work? Staak is your best software to get matched
 						</BlockBodyStyled>
 						<FlexBox justify="flex-start">
 							<a target="_blank" href={`${STAAK_URL}/register/company`} style={{ marginRight: '15px' }} rel="noreferrer">

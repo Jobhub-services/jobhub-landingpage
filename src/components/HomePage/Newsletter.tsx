@@ -60,9 +60,7 @@ const Newsletter = () => {
 		<Container>
 			<div>
 				<TitleStyled>Subscribe to staak now</TitleStyled>
-				<DescriptionStyled>
-					We have big news to the recruitment world, don't miss email subscription to stay up to date, and be the first who enjoy the staak news
-				</DescriptionStyled>
+				<DescriptionStyled>Stay up to date and be the first who enjoy the latest staak updates</DescriptionStyled>
 			</div>
 			<ContactFormStyled>
 				<LabelEmailStyled>Professional email</LabelEmailStyled>

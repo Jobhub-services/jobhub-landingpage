@@ -60,7 +60,7 @@ const ContactUS = (props) => {
 								</FlexBox>
 								<span>{STAAK_EMAIL}</span>
 							</FlexBox>
-							<FlexBox gap={7}>
+							<FlexBox gap={7} align="start">
 								<FlexBox>
 									<LocationFillIcon color="white" />
 								</FlexBox>

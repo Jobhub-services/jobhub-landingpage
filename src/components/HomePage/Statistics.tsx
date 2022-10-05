@@ -42,9 +42,8 @@ const Statistics = () => {
 			<SectionContent>
 				<TitleSection>Where great companies hire great people.</TitleSection>
 				<SubTitleSection>
-					Staak is the company where hiring and finding Jobs will be easy in the arab world, we are buidling solid and great software to make all
-					companies and start-up in the arabic world find the right talent, and staak also provide great experience to talents to find thier dream
-					company
+					Staak is creating an efficient and effective solution for any company that is looking to hire or any talent is looking for a job. Paving the
+					way for new development hires and transforming the industry one feature at a time.
 				</SubTitleSection>
 				{/*<CardStyled justify="flex-start">
 					<GroupPersonsIcon size={48} />

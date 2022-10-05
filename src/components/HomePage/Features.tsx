@@ -53,8 +53,8 @@ const Features = () => {
 				<ContentStyled>
 					<TitleStyled>Take your career or business to new heights</TitleStyled>
 					<BodyStyled>
-						You are not able to find jobs , or you can't find the right developer staak is here to help you to pass your business to the next level by
-						hiring the best developers in the world
+						You are not able to find jobs?. You can't find the right talent?. Staak helps you take your business to the next level by hiring talents
+						who are among the best in their field
 					</BodyStyled>
 					<a href={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
 						<Button>Join Staak now</Button>
@@ -64,14 +64,14 @@ const Features = () => {
 			<ContainerCard>
 				<FeatureCard>
 					<FindJobIcon size={60} />
-					<CardTitle>Find opportunities</CardTitle>
+					<CardTitle>Land your dream job</CardTitle>
 					<CardDescription>
-						Create a job post in minutes or explore an opening from interesting companies seeking to grow their team and community!
+						Create a job post in minutes or explore an opening from the best companies seeking to grow their team and community!
 					</CardDescription>
 				</FeatureCard>
 				<FeatureCard>
 					<SandboxIcon size={60} />
-					<CardTitle>Improve your skills</CardTitle>
+					<CardTitle>Grow your skillset </CardTitle>
 					<CardDescription>
 						Join a company and start growing your skills by facing new challenges and problems you have to solve. We never stop learning from new
 						experiences!
@@ -79,10 +79,10 @@ const Features = () => {
 				</FeatureCard>
 				<FeatureCard>
 					<GroupPersonsIcon size={60} />
-					<CardTitle>Join best companies</CardTitle>
+					<CardTitle>Hire the best talents</CardTitle>
 					<CardDescription>
-						Companies with passion and eager to scale, grow and innovate are the companies you can find here! So explore the opportunities and choose
-						the one most suitable for you!
+						Hire the best talent you can find. A good hire is not just someone with experience or skills, but also one who will work hard and be
+						creative in their approach to solving problems
 					</CardDescription>
 				</FeatureCard>
 			</ContainerCard>
