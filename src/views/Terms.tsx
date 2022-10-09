@@ -9,16 +9,11 @@ const SubContent = styled.div`
 	width: 100%;
 `;
 const Header = styled.div`
-	color: ${colors.WHITE} !important;
-	background-color: ${colors.PURPLE_BASE};
 	padding: 2px 20px 10px 20px;
-	//border-radius: 5px;
-	//margin-top: 20px;
-	margin-bottom: 50px;
 	border-top: 1px solid white;
 `;
 const SH1 = styled.h1`
-	//color: ${colors.PURPLE_BASE};
+	color: ${colors.PURPLE_BASE};
 `;
 const SubH1 = styled.h1`
 	font-size: 28px;
