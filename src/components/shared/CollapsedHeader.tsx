@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useContext, useRef, useState } from 'react';
 import { MasterLayoutContext } from '@/views/MasterLayout';
 import { VariantType } from '@/models/theme/staakLogo.interface';
-import { DropDownItem, FlexBox } from 'staak-ui';
+import { Button, DropDownItem, FlexBox } from 'staak-ui';
 import { APP_HEADER_HEIGHT } from '@/constants/app.constants';
 import CloseIcon from '@/assets/icons/CloseIcon';
 
@@ -64,7 +64,7 @@ const SList = styled.div<any>`
 	width: ${(props) => (props.collapse ? '300px' : '0')};
 	display: ${(props) => (props.collapse ? 'flex' : 'none')};
 	animation: ${kFullWidth} 0.2s ease-in-out;
-	height: 650px;
+	height: ${(props) => `${props.height}px`};
 	z-index: 4;
 `;
 const SHeader = styled(FlexBox)`
@@ -91,26 +91,38 @@ const CollapsedHeader = () => {
 					<ListIcon width="30px" height="30px" color={context?.scrolled ? colors.PURPLE_BASE : colors.WHITE} />
 				</span>
 			</StyledHeader>
-			<SList collapse={collapse}>
-				<SHeader height={`${APP_HEADER_HEIGHT}px`} justify="start">
-					<span onClick={handleCollapse}>
-						<CloseIcon color={colors.PURPLE_BASE} />
-					</span>
-				</SHeader>
-				<FlexBox flexDirection="column" align="start" justify="start" gap={20} style={{ marginTop: '15px', padding: '0 10px' }}>
-					<SLink to={`${STAAK_URL}/public/jobs`} target="_blank" rel="noreferrer">
-						<DropDownItem size="md">Browse Jobs</DropDownItem>
-					</SLink>
-					<SLink to={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
-						<DropDownItem size="md">Find Talent</DropDownItem>
-					</SLink>
-					<SLink to={`${STAAK_URL}/register/developer`} target="_blank" rel="noreferrer">
-						<DropDownItem size="md">Find Company</DropDownItem>
-					</SLink>
-					<SLink to="/contact-us">
-						<DropDownItem size="md">Contact us</DropDownItem>
-					</SLink>
-				</FlexBox>
+			<SList collapse={collapse} height={context.height}>
+				<div style={{ width: '100%' }}>
+					<SHeader height={`${APP_HEADER_HEIGHT}px`} justify="start">
+						<span onClick={handleCollapse}>
+							<CloseIcon color={colors.PURPLE_BASE} />
+						</span>
+					</SHeader>
+					<FlexBox flexDirection="column" align="start" justify="start" gap={20} style={{ marginTop: '15px', padding: '0 10px' }}>
+						<SLink to={`${STAAK_URL}/public/jobs`} target="_blank" rel="noreferrer">
+							<DropDownItem size="md">Browse Jobs</DropDownItem>
+						</SLink>
+						<SLink to={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
+							<DropDownItem size="md">Find Talent</DropDownItem>
+						</SLink>
+						<SLink to={`${STAAK_URL}/register/developer`} target="_blank" rel="noreferrer">
+							<DropDownItem size="md">Find Company</DropDownItem>
+						</SLink>
+						<SLink to="/contact-us">
+							<DropDownItem size="md">Contact us</DropDownItem>
+						</SLink>
+						<FlexBox width="100%">
+							<a target="_blank" href={`${STAAK_URL}/login`} style={{ marginRight: 15 }} rel="noreferrer">
+								<Button size="md" variant="light">
+									Login
+								</Button>
+							</a>
+							<a target="_blank" href={`${STAAK_URL}/register/company`} rel="noreferrer">
+								<Button size="md">Join Staak</Button>
+							</a>
+						</FlexBox>
+					</FlexBox>
+				</div>
 			</SList>
 		</Container>
 	);

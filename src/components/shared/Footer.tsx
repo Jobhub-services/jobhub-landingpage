@@ -14,7 +14,28 @@ const StyledDiv = styled(FlexBox)`
 	color: ${colors.WHITE};
 	background-color: #292929;
 `;
-
+const SubContainer = styled(FlexBox)`
+	width: 70%;
+	@media only screen and (max-width: 1180px) {
+		width: 80%;
+	}
+	@media only screen and (max-width: 1020px) {
+		width: 92%;
+	}
+`;
+const SContent = styled(FlexBox)`
+	flex-direction: row-reverse;
+	@media only screen and (max-width: 860px) {
+		flex-direction: column;
+		& .services {
+			width: 90% !important;
+		}
+		& .connection {
+			margin-top: 20px;
+			height: 120px !important;
+		}
+	}
+`;
 const StyledIcon = styled.span`
 	cursor: pointer;
 	margin-left: 15px;
@@ -38,6 +59,9 @@ const CopyrightStyled = styled(FlexBox)`
 	padding: 0 15%;
 	background-color: ${colors.GRAY_BASE};
 	width: 100%;
+	@media only screen and (max-width: 760px) {
+		padding: 0 7%;
+	}
 `;
 const LinkStyled = styled(Link)`
 	margin-left: 15px;
@@ -47,9 +71,45 @@ const Footer = () => {
 	return (
 		<>
 			<StyledDiv>
-				<FlexBox flexDirection="column" width="70%">
-					<FlexBox justify="space-between" align="flex-start" width="100%">
-						<FlexBox flexDirection="column" align="flex-start" height="350px" justify="space-between">
+				<SubContainer flexDirection="column">
+					<SContent justify="space-between" align="flex-start" width="100%">
+						<FlexBox align="flex-start" justify="space-between" width="60%" className="services">
+							<FlexBox flexDirection="column" align="flex-start">
+								<H1Styled>For Companies</H1Styled>
+								<FlexBox flexDirection="column" align="flex-start">
+									<LinkTag>Post jobs</LinkTag>
+									<LinkTag>Browser talents</LinkTag>
+									<LinkTag>Contact talents</LinkTag>
+									<LinkTag>Track applications</LinkTag>
+									<LinkTag>Customize profile</LinkTag>
+								</FlexBox>
+							</FlexBox>
+							<FlexBox flexDirection="column" align="flex-start">
+								<H1Styled>For Talents</H1Styled>
+								<FlexBox flexDirection="column" align="flex-start">
+									<LinkTag>Browser companies</LinkTag>
+									<LinkTag>Browser jobs</LinkTag>
+									<LinkTag>Easy application</LinkTag>
+									<LinkTag>Customize profile</LinkTag>
+								</FlexBox>
+							</FlexBox>
+							<FlexBox flexDirection="column" align="flex-start">
+								<H1Styled>For us</H1Styled>
+								<FlexBox flexDirection="column" align="flex-start">
+									<Link to="/contact-us">
+										<LinkTag>Contact us</LinkTag>
+									</Link>
+
+									{/*<Link to="/about">
+									<LinkTag>About us</LinkTag>
+	</Link>*/}
+									<a href={`${STAAK_URL}/login`} target="_blank" rel="noreferrer">
+										<LinkTag>Join us</LinkTag>
+									</a>
+								</FlexBox>
+							</FlexBox>
+						</FlexBox>
+						<FlexBox flexDirection="column" align="flex-start" height="350px" justify="space-between" width="40%" className="connection">
 							<StaakLogo variant={VariantType.LIGHT} size={130} />
 							<FlexBox justify="space-between">
 								<a target="_blank" href={`${STAAK_URL}/register/company`} style={{ marginRight: '15px' }} rel="noreferrer">
@@ -62,41 +122,7 @@ const Footer = () => {
 								</a>
 							</FlexBox>
 						</FlexBox>
-						<FlexBox flexDirection="column" align="flex-start">
-							<H1Styled>For Companies</H1Styled>
-							<FlexBox flexDirection="column" align="flex-start">
-								<LinkTag>Post jobs</LinkTag>
-								<LinkTag>Browser talents</LinkTag>
-								<LinkTag>Contact talents</LinkTag>
-								<LinkTag>Track applications</LinkTag>
-								<LinkTag>Customize profile</LinkTag>
-							</FlexBox>
-						</FlexBox>
-						<FlexBox flexDirection="column" align="flex-start">
-							<H1Styled>For Talents</H1Styled>
-							<FlexBox flexDirection="column" align="flex-start">
-								<LinkTag>Browser companies</LinkTag>
-								<LinkTag>Browser jobs</LinkTag>
-								<LinkTag>Easy application</LinkTag>
-								<LinkTag>Customize profile</LinkTag>
-							</FlexBox>
-						</FlexBox>
-						<FlexBox flexDirection="column" align="flex-start">
-							<H1Styled>For us</H1Styled>
-							<FlexBox flexDirection="column" align="flex-start">
-								<Link to="/contact-us">
-									<LinkTag>Contact us</LinkTag>
-								</Link>
-
-								{/*<Link to="/about">
-									<LinkTag>About us</LinkTag>
-	</Link>*/}
-								<a href={`${STAAK_URL}/login`} target="_blank" rel="noreferrer">
-									<LinkTag>Join us</LinkTag>
-								</a>
-							</FlexBox>
-						</FlexBox>
-					</FlexBox>
+					</SContent>
 					<StyledDivider />
 					<StyledFlexBox justify="space-between">
 						<div>
@@ -127,7 +153,7 @@ const Footer = () => {
 							</a>
 						</FlexBox>
 					</StyledFlexBox>
-				</FlexBox>
+				</SubContainer>
 			</StyledDiv>
 			<CopyrightStyled justify="space-between">
 				<span>© Staak services 2022</span>

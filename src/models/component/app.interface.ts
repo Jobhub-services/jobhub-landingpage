@@ -3,6 +3,7 @@ import { CSSProperties } from 'styled-components';
 export interface MasterContextProps {
 	scrolled?: boolean;
 	collapsed?: boolean;
+	height?: number;
 }
 
 export interface PIconProps {

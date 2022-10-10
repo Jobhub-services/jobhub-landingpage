@@ -16,22 +16,26 @@ const StyledHomeView = styled.div`
 const masterContext: MasterContextProps = {
 	collapsed: false,
 	scrolled: false,
+	height: 0,
 };
 export const MasterLayoutContext = createContext<MasterContextProps>(masterContext);
 
 const MasterLayout: FC = () => {
 	const [scrollStart, setScrollStart] = useState(false);
 	const [isCollapsed, setIsCollapsed] = useState(false);
+	const [height, setHeight] = useState(0);
 
 	useEffect(() => {
 		window.addEventListener('resize', handleResize);
 		setIsCollapsed(window.innerWidth <= 1180);
+		setHeight(window.innerHeight);
 		return function cleanUp() {
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
 
 	const handleResize = () => {
+		setHeight(window.innerHeight);
 		setIsCollapsed(window.innerWidth <= 1180);
 	};
 	const handleScroll = (e) => {
@@ -41,7 +45,7 @@ const MasterLayout: FC = () => {
 		else if (scrollTop < 50 && scrollStart) setScrollStart(false);
 	};
 	return (
-		<MasterLayoutContext.Provider value={{ scrolled: scrollStart, collapsed: isCollapsed }}>
+		<MasterLayoutContext.Provider value={{ scrolled: scrollStart, collapsed: isCollapsed, height: height }}>
 			<StyledHomeView onScroll={handleScroll}>
 				{isCollapsed ? <CollapsedHeader /> : <Header />}
 				<Outlet />
