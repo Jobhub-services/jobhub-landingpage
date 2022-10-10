@@ -1,17 +1,21 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Input, Button } from 'staak-ui';
+import { Input, Button, FlexBox } from 'staak-ui';
 import { colors } from '@/assets/theme';
 import { actions as AppActions } from '@/modules/actions/app.actions';
 
-const Container = styled.div`
+const Container = styled(FlexBox)`
 	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
 	padding: 7em 0;
 	background: ${colors.PURPLE_1};
+	gap: 40px;
+	@media only screen and (max-width: 1020px) {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 7em 2em;
+		gap: 0px;
+	}
 `;
 const TitleStyled = styled.h1`
 	margin: 0;
@@ -24,7 +28,6 @@ const DescriptionStyled = styled.p`
 
 const ContactFormStyled = styled.div`
 	position: relative;
-	margin-left: 30px;
 	padding: 20px;
 	width: 500px;
 	border-radius: 8px;

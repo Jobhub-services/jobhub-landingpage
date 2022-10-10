@@ -8,6 +8,10 @@ import { colors } from '@/assets/theme';*/
 
 const ContainerStyled = styled(FlexBox)`
 	padding: 6em 0;
+	@media only screen and (max-width: 1020px) {
+		flex-direction: column;
+		gap: 20px;
+	}
 `;
 const SectionContent = styled.div`
 	width: 500px;

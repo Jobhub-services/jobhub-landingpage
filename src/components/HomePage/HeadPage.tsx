@@ -12,6 +12,16 @@ const Container = styled.div`
 	background-color: ${colors.PURPLE_BASE};
 	padding: 60px 0px;
 `;
+
+const SubGlobalContainer = styled(FlexBox)`
+	flex-direction: row-reverse;
+	height: 450px !important;
+	@media only screen and (max-width: 1000px) {
+		flex-direction: column !important;
+		gap: 100px;
+		height: 700px;
+	}
+`;
 const HeadPageStyled = styled.div`
 	position: relative;
 	z-index: 1;
@@ -26,8 +36,16 @@ const TitleStyled = styled.h1`
 const SubContainer = styled.div`
 	margin-top: -3em;
 	width: 600px;
+	@media only screen and (max-width: 660px) {
+		width: 550px;
+	}
 `;
-
+const SImg = styled.img`
+	width: 600px;
+	@media only screen and (max-width: 660px) {
+		width: 500px;
+	}
+`;
 const BlockBodyStyled = styled.p`
 	margin-bottom: 3em;
 `;
@@ -36,7 +54,8 @@ const HeadPage: FC = () => {
 	return (
 		<Container>
 			<HeadPageStyled>
-				<FlexBox justify="space-between" style={{ height: '450px' }}>
+				<SubGlobalContainer justify="space-between">
+					<SImg src="assets/img/home/head-page-icon.svg" alt="" />
 					<SubContainer>
 						<TitleStyled>Find your next development talent on Staak</TitleStyled>
 						<BlockBodyStyled>
@@ -54,8 +73,7 @@ const HeadPage: FC = () => {
 							</a>
 						</FlexBox>
 					</SubContainer>
-					<img src="assets/img/home/head-page-icon.svg" alt="" width={600} />
-				</FlexBox>
+				</SubGlobalContainer>
 			</HeadPageStyled>
 			<WaveBg />
 		</Container>

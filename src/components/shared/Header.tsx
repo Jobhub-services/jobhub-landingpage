@@ -6,7 +6,7 @@ import { colors } from '@/assets/theme';
 import StaakLogo from '@/assets/theme/StaakLogo';
 import { APP_HEADER_HEIGHT } from '@/constants/app.constants';
 import { VariantType } from '@/models/theme/staakLogo.interface';
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import { MasterLayoutContext } from '@/views/MasterLayout';
 
 const { STAAK_URL } = STAAK_ENV;
@@ -28,39 +28,34 @@ const StyledHeader = styled(FlexBox)`
 		`}
 `;
 const Header: FC = () => {
+	const context = useContext(MasterLayoutContext);
+	const loginBtnProps: any = {
+		variant: 'text',
+	};
+	loginBtnProps.variant = 'outlined';
+	if (!context?.scrolled) {
+		loginBtnProps.color = 'white';
+	}
+	const joinBtnProps: any = {};
+	if (!context?.scrolled) {
+		joinBtnProps.color = 'white';
+		joinBtnProps.noBg = true;
+	}
 	return (
-		<MasterLayoutContext.Consumer>
-			{(scrolled) => {
-				const loginBtnProps: any = {
-					variant: 'text',
-				};
-				loginBtnProps.variant = 'outlined';
-				if (!scrolled) {
-					loginBtnProps.color = 'white';
-				}
-				const joinBtnProps: any = {};
-				if (!scrolled) {
-					joinBtnProps.color = 'white';
-					joinBtnProps.noBg = true;
-				}
-				return (
-					<StyledHeader justify="space-between" scrolled={scrolled} align="center" size="lg">
-						<Link to="/">
-							<StaakLogo variant={scrolled ? VariantType.PRIMARY : VariantType.LIGHT} size={140} />
-						</Link>
-						<FlexBox align="center">
-							<NavItems isLight={!scrolled} />
-							<a target="_blank" href={`${STAAK_URL}/login`} style={{ marginRight: 15 }} rel="noreferrer">
-								<Button {...loginBtnProps}>Login</Button>
-							</a>
-							<a target="_blank" href={`${STAAK_URL}/register/company`} rel="noreferrer">
-								<Button {...joinBtnProps}>Join Staak</Button>
-							</a>
-						</FlexBox>
-					</StyledHeader>
-				);
-			}}
-		</MasterLayoutContext.Consumer>
+		<StyledHeader justify="space-between" scrolled={context?.scrolled} align="center" size="lg">
+			<Link to="/">
+				<StaakLogo variant={context?.scrolled ? VariantType.PRIMARY : VariantType.LIGHT} size={140} />
+			</Link>
+			<FlexBox align="center">
+				<NavItems isLight={!context?.scrolled} />
+				<a target="_blank" href={`${STAAK_URL}/login`} style={{ marginRight: 15 }} rel="noreferrer">
+					<Button {...loginBtnProps}>Login</Button>
+				</a>
+				<a target="_blank" href={`${STAAK_URL}/register/company`} rel="noreferrer">
+					<Button {...joinBtnProps}>Join Staak</Button>
+				</a>
+			</FlexBox>
+		</StyledHeader>
 	);
 };
 

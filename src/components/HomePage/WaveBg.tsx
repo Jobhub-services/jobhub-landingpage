@@ -3,6 +3,12 @@ const SvgStyled = styled.svg`
 	position: absolute;
 	margin-top: 100px;
 	bottom: -50px;
+	@media only screen and (max-width: 1000px) {
+		bottom: -150px;
+	}
+	@media only screen and (max-width: 780px) {
+		bottom: -120px;
+	}
 `;
 export const WaveBg = () => {
 	return (

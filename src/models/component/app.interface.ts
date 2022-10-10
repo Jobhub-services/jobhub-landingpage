@@ -1,5 +1,10 @@
 import { CSSProperties } from 'styled-components';
 
+export interface MasterContextProps {
+	scrolled?: boolean;
+	collapsed?: boolean;
+}
+
 export interface PIconProps {
 	width?: string;
 	height?: string;

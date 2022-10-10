@@ -14,9 +14,34 @@ const FeatureContainer = styled.div`
 const ContainerStyled = styled(FlexBox)`
 	width: max-content;
 	margin: auto;
+	@media only screen and (max-width: 1040px) {
+		flex-direction: column;
+		gap: 20px;
+	}
 `;
 const ContentStyled = styled.div`
 	width: 520px;
+	@media only screen and (max-width: 1280px) {
+		width: 400px;
+	}
+	@media only screen and (max-width: 1040px) {
+		width: 600px;
+	}
+	@media only screen and (max-width: 680px) {
+		width: 400px;
+	}
+`;
+const SImg = styled.img`
+	width: 750px;
+	@media only screen and (max-width: 1280px) {
+		width: 630px;
+	}
+	@media only screen and (max-width: 1040px) {
+		width: 750px;
+	}
+	@media only screen and (max-width: 680px) {
+		width: 630px;
+	}
 `;
 const TitleStyled = styled.h1`
 	margin-top: 0px;
@@ -27,6 +52,10 @@ const BodyStyled = styled.p`
 
 const ContainerCard = styled(FlexBox)`
 	margin-top: 6em;
+	@media only screen and (max-width: 1040px) {
+		flex-direction: column;
+		gap: 20px;
+	}
 `;
 
 const FeatureCard = styled.div`
@@ -49,7 +78,7 @@ const Features = () => {
 	return (
 		<FeatureContainer>
 			<ContainerStyled justify="space-between">
-				<img src="assets/img/home/carrer_icon.svg" alt="" width={750} />
+				<SImg src="assets/img/home/carrer_icon.svg" alt="" />
 				<ContentStyled>
 					<TitleStyled>Take your career or business to new heights</TitleStyled>
 					<BodyStyled>

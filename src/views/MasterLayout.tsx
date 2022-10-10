@@ -1,8 +1,11 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState, createContext } from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import Footer from '@/components/shared/Footer';
 import Header from '@/components/shared/Header';
+import { MasterContextProps } from '@/models/component/app.interface';
+import CollapsedHeader from '@/components/shared/CollapsedHeader';
+
 const StyledHomeView = styled.div`
 	position: relative;
 	width: 100%;
@@ -10,10 +13,27 @@ const StyledHomeView = styled.div`
 	overflow-y: auto;
 	overflow-x: hidden;
 `;
-export const MasterLayoutContext = React.createContext(false);
+const masterContext: MasterContextProps = {
+	collapsed: false,
+	scrolled: false,
+};
+export const MasterLayoutContext = createContext<MasterContextProps>(masterContext);
 
 const MasterLayout: FC = () => {
 	const [scrollStart, setScrollStart] = useState(false);
+	const [isCollapsed, setIsCollapsed] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+		setIsCollapsed(window.innerWidth <= 1180);
+		return function cleanUp() {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	const handleResize = () => {
+		setIsCollapsed(window.innerWidth <= 1180);
+	};
 	const handleScroll = (e) => {
 		const scrollElement: HTMLElement = e.target;
 		const scrollTop = scrollElement.scrollTop;
@@ -21,9 +41,9 @@ const MasterLayout: FC = () => {
 		else if (scrollTop < 50 && scrollStart) setScrollStart(false);
 	};
 	return (
-		<MasterLayoutContext.Provider value={scrollStart}>
+		<MasterLayoutContext.Provider value={{ scrolled: scrollStart, collapsed: isCollapsed }}>
 			<StyledHomeView onScroll={handleScroll}>
-				<Header />
+				{isCollapsed ? <CollapsedHeader /> : <Header />}
 				<Outlet />
 				<Footer />
 			</StyledHomeView>

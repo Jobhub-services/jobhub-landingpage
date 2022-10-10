@@ -10,6 +10,18 @@ const ServiceContainer = styled.div`
 	padding-bottom: 6em;
 	margin-top: -220px;
 	z-index: 1;
+	@media only screen and (max-width: 1450px) {
+		margin-top: -170px;
+	}
+	@media only screen and (max-width: 1280px) {
+		margin-top: -130px;
+	}
+	@media only screen and (max-width: 1000px) {
+		margin-top: 10px;
+	}
+	@media only screen and (max-width: 780px) {
+		margin-top: 50px;
+	}
 `;
 
 const ContainerTitle = styled.h1`
@@ -18,8 +30,25 @@ const ContainerTitle = styled.h1`
 	margin: 0 auto 3em auto;
 	color: ${colors.PURPLE_BASE};
 	width: 900px;
+	@media only screen and (max-width: 1000px) {
+		width: 800px;
+	}
+	@media only screen and (max-width: 800px) {
+		width: 700px;
+	}
+	@media only screen and (max-width: 700px) {
+		width: 600px;
+	}
+	@media only screen and (max-width: 600px) {
+		width: 500px;
+	}
 `;
 
+const CardContainer = styled(FlexBox)`
+	@media only screen and (max-width: 970px) {
+		flex-direction: column;
+	}
+`;
 const CardService = styled(FlexBox)`
 	width: 400px;
 	height: 400px;
@@ -50,7 +79,7 @@ const Services = () => {
 	return (
 		<ServiceContainer>
 			<ContainerTitle>Hire talents that meet your company's needs with the world's leading recruitment platform</ContainerTitle>
-			<FlexBox>
+			<CardContainer>
 				<CardService flexDirection="column">
 					<CardIcon>
 						<JobIcon size={50} color="#ffffff" />
@@ -76,7 +105,7 @@ const Services = () => {
 						You can find the right talent for your requirements by browsing our pool of available professionals and have direct access to the talent
 					</CardBody>
 				</CardService>
-			</FlexBox>
+			</CardContainer>
 		</ServiceContainer>
 	);
 };
