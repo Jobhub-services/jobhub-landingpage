@@ -3,7 +3,7 @@ import { colors } from '@/assets/theme';
 import styled, { css, keyframes } from 'styled-components';
 import StaakLogo from '@/assets/theme/StaakLogo';
 import { Link } from 'react-router-dom';
-import { useContext, useRef, useState } from 'react';
+import { useContext, useState } from 'react';
 import { MasterLayoutContext } from '@/views/MasterLayout';
 import { VariantType } from '@/models/theme/staakLogo.interface';
 import { Button, DropDownItem, FlexBox } from 'staak-ui';
@@ -38,7 +38,7 @@ const StyledHeader = styled(FlexBox)`
 `;
 
 const Container = styled.div<any>`
-	position: fixed;
+	position: sticky;
 	top: 0;
 	right: 0;
 	//background-color: ${colors.BLACK_11};

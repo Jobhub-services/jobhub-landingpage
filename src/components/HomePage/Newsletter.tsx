@@ -33,6 +33,9 @@ const ContactFormStyled = styled.div`
 	border-radius: 8px;
 	text-align: center;
 	background: ${colors.WHITE};
+	@media only screen and (max-width: 560px) {
+		width: 400px;
+	}
 `;
 const LabelEmailStyled = styled.label`
 	display: block;

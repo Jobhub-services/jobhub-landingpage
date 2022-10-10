@@ -16,6 +16,10 @@ const ContainerStyled = styled(FlexBox)`
 const SectionContent = styled.div`
 	width: 500px;
 	margin-left: 6em;
+	@media only screen and (max-width: 580px) {
+		width: 430px;
+		margin-left: 0em;
+	}
 `;
 const TitleSection = styled.h1`
 	margin-top: 0;
@@ -23,6 +27,15 @@ const TitleSection = styled.h1`
 const SubTitleSection = styled.p`
 	font-size: 1.1em;
 	margin-bottom: 40px;
+`;
+const SImg = styled.img`
+	width: 600px;
+	@media only screen and (max-width: 720px) {
+		width: 500px;
+	}
+	@media only screen and (max-width: 520px) {
+		width: 430px;
+	}
 `;
 /*
 const CardStyled = styled(FlexBox)`
@@ -42,7 +55,7 @@ const CardLabel = styled.h4`
 const Statistics = () => {
 	return (
 		<ContainerStyled>
-			<img src="assets/img/home/world-chart.svg" alt="" width={600} />
+			<SImg src="assets/img/home/world-chart.svg" alt="" />
 			<SectionContent>
 				<TitleSection>Where great companies hire great people.</TitleSection>
 				<SubTitleSection>

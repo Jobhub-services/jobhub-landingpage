@@ -37,13 +37,19 @@ const SubContainer = styled.div`
 	margin-top: -3em;
 	width: 600px;
 	@media only screen and (max-width: 660px) {
-		width: 550px;
+		width: 500px;
+	}
+	@media only screen and (max-width: 560px) {
+		width: 450px;
 	}
 `;
 const SImg = styled.img`
 	width: 600px;
 	@media only screen and (max-width: 660px) {
 		width: 500px;
+	}
+	@media only screen and (max-width: 560px) {
+		width: 450px;
 	}
 `;
 const BlockBodyStyled = styled.p`
