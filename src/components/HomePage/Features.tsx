@@ -33,6 +33,9 @@ const ContentStyled = styled.div`
 	@media only screen and (max-width: 520px) {
 		width: 350px;
 	}
+	@media only screen and (max-width: 480px) {
+		width: 300px;
+	}
 `;
 const SImg = styled.img`
 	width: 750px;
@@ -47,6 +50,9 @@ const SImg = styled.img`
 	}
 	@media only screen and (max-width: 530px) {
 		width: 580px;
+	}
+	@media only screen and (max-width: 480px) {
+		width: 450px;
 	}
 `;
 const TitleStyled = styled.h1`

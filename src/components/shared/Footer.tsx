@@ -35,6 +35,11 @@ const SContent = styled(FlexBox)`
 			height: 120px !important;
 		}
 	}
+	@media only screen and (max-width: 480px) {
+		& .services {
+			width: 100% !important;
+		}
+	}
 `;
 const StyledIcon = styled.span`
 	cursor: pointer;
@@ -61,6 +66,9 @@ const CopyrightStyled = styled(FlexBox)`
 	width: 100%;
 	@media only screen and (max-width: 760px) {
 		padding: 0 7%;
+	}
+	@media only screen and (max-width: 480px) {
+		padding: 0 3%;
 	}
 `;
 const LinkStyled = styled(Link)`

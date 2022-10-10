@@ -35,6 +35,10 @@ const StyledHeader = styled(FlexBox)`
 		css`
 			box-shadow: 1px 1px 30px #00000042;
 		`}
+
+	@media only screen and (max-width:480px) {
+		padding: 0 20px;
+	}
 `;
 
 const Container = styled.div<any>`

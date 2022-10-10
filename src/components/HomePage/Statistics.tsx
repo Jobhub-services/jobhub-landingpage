@@ -20,6 +20,10 @@ const SectionContent = styled.div`
 		width: 430px;
 		margin-left: 0em;
 	}
+	@media only screen and (max-width: 480px) {
+		width: 330px;
+		margin-left: 0em;
+	}
 `;
 const TitleSection = styled.h1`
 	margin-top: 0;
@@ -35,6 +39,9 @@ const SImg = styled.img`
 	}
 	@media only screen and (max-width: 520px) {
 		width: 430px;
+	}
+	@media only screen and (max-width: 480px) {
+		width: 350px;
 	}
 `;
 /*

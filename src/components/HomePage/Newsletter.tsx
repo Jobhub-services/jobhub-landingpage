@@ -24,6 +24,9 @@ const TitleStyled = styled.h1`
 
 const DescriptionStyled = styled.p`
 	width: 450px;
+	@media only screen and (max-width: 460px) {
+		width: 350px;
+	}
 `;
 
 const ContactFormStyled = styled.div`
@@ -36,7 +39,11 @@ const ContactFormStyled = styled.div`
 	@media only screen and (max-width: 560px) {
 		width: 400px;
 	}
+	@media only screen and (max-width: 460px) {
+		width: 300px;
+	}
 `;
+const SDiv = styled.div``;
 const LabelEmailStyled = styled.label`
 	display: block;
 	text-align: left;
@@ -64,10 +71,10 @@ const Newsletter = () => {
 	}
 	return (
 		<Container>
-			<div>
+			<SDiv>
 				<TitleStyled>Subscribe to staak now</TitleStyled>
 				<DescriptionStyled>Stay up to date and be the first who enjoy the latest staak updates</DescriptionStyled>
-			</div>
+			</SDiv>
 			<ContactFormStyled>
 				<LabelEmailStyled>Professional email</LabelEmailStyled>
 				<Input

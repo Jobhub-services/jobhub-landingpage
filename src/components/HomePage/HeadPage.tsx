@@ -42,6 +42,9 @@ const SubContainer = styled.div`
 	@media only screen and (max-width: 560px) {
 		width: 450px;
 	}
+	@media only screen and (max-width: 480px) {
+		width: 330px;
+	}
 `;
 const SImg = styled.img`
 	width: 600px;
@@ -50,6 +53,9 @@ const SImg = styled.img`
 	}
 	@media only screen and (max-width: 560px) {
 		width: 450px;
+	}
+	@media only screen and (max-width: 480px) {
+		width: 300px;
 	}
 `;
 const BlockBodyStyled = styled.p`

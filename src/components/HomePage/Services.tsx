@@ -45,6 +45,10 @@ const ContainerTitle = styled.h1`
 	@media only screen and (max-width: 520px) {
 		width: 430px;
 	}
+	@media only screen and (max-width: 480px) {
+		width: 350px;
+		font-size: 1.8em;
+	}
 `;
 
 const CardContainer = styled(FlexBox)`
