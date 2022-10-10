@@ -23,9 +23,22 @@ const MainContainer = styled(FlexBox)`
 	margin-top: 60px;
 	padding: 30px 30px;
 	height: 690px;
+	@media only screen and (max-width: 1460px) {
+		width: 80%;
+	}
+	@media only screen and (max-width: 1080px) {
+		width: 92%;
+	}
+	@media only screen and (max-width: 780px) {
+		flex-direction: column;
+		height: 1150px;
+	}
 `;
 const LContainer = styled(FlexBox)`
 	width: 45%;
+	@media only screen and (max-width: 780px) {
+		width: 100%;
+	}
 `;
 const StyledIcon = styled.span`
 	cursor: pointer;
@@ -38,7 +51,7 @@ const ContactUS = (props) => {
 		<FlexBox flexDirection="column" style={{ marginTop: '70px', marginBottom: '70px' }}>
 			<FlexBox flexDirection="column">
 				<Headline style={{ margin: '10px 0 10px 0' }}>Contact us</Headline>
-				<div>Any questions, remarks or need help? just wirte us a message</div>
+				<div style={{ whiteSpace: 'pre-line', margin: '0 10px' }}>Any questions, remarks or need help? just wirte us a message</div>
 			</FlexBox>
 			<MainContainer align="start" gap={20}>
 				<LContainer flexDirection="column" align="start" justify="space-between" height="100%">

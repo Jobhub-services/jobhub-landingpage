@@ -7,6 +7,9 @@ const SubContent = styled.div`
 	padding: 0 70px;
 	max-width: 1300px;
 	width: 100%;
+	@media only screen and (max-width: 620px) {
+		padding: 0 20px;
+	}
 `;
 const Header = styled.div`
 	padding: 2px 20px 10px 20px;

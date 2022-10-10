@@ -12,6 +12,9 @@ const RContainer = styled.div`
 	width: 55%;
 	color: ${colors.BLACK_2};
 	box-shadow: 0px 0px 20px -10px ${colors.PURPLE_1};
+	@media only screen and (max-width: 780px) {
+		width: 100%;
+	}
 `;
 const SH3 = styled.h3`
 	margin: 0;
