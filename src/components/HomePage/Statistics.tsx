@@ -66,7 +66,7 @@ const Statistics = () => {
 			<SectionContent>
 				<TitleSection>Where great companies hire great people.</TitleSection>
 				<SubTitleSection>
-					Staak is creating an efficient and effective solution for any company that is looking to hire or any talent is looking for a job. Paving the
+					staak is creating an efficient and effective solution for any company that is looking to hire or any talent is looking for a job. Paving the
 					way for new development hires and transforming the industry one feature at a time.
 				</SubTitleSection>
 				{/*<CardStyled justify="flex-start">

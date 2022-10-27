@@ -4,7 +4,7 @@ import { API_PATHS } from '@/constants/api.constants';
 const { NOTIFICATION_SERVICE } = API_PATHS;
 
 export const actions = {
-	async subscribeToNewsletter(email: string) {
+	subscribeToNewsletter: async (email: string) => {
 		try {
 			const response = await httpClient.post(`${NOTIFICATION_SERVICE}/newsletter/subscribe`, { email });
 			if (response.data) return true;

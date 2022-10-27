@@ -126,7 +126,7 @@ const Footer = () => {
 									</Button>
 								</a>
 								<a target="_blank" href={`${STAAK_URL}/register/developer`} rel="noreferrer">
-									<Button>Join Staak & Code</Button>
+									<Button>Join staak & Code</Button>
 								</a>
 							</FlexBox>
 						</FlexBox>
@@ -164,7 +164,7 @@ const Footer = () => {
 				</SubContainer>
 			</StyledDiv>
 			<CopyrightStyled justify="space-between">
-				<span>© Staak services 2022</span>
+				<span>© staak services 2022</span>
 				<div>
 					<LinkStyled to="/terms-conditions">Terms & Conditions</LinkStyled>
 					<LinkStyled to="/privacy-policy">Privacy Policy</LinkStyled>

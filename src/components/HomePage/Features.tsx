@@ -94,11 +94,11 @@ const Features = () => {
 				<ContentStyled>
 					<TitleStyled>Take your career or business to new heights</TitleStyled>
 					<BodyStyled>
-						You are not able to find jobs?. You can't find the right talent?. Staak helps you take your business to the next level by hiring talents
+						You are not able to find jobs?. You can't find the right talent?. staak helps you take your business to the next level by hiring talents
 						who are among the best in their field
 					</BodyStyled>
 					<a href={`${STAAK_URL}/register/company`} target="_blank" rel="noreferrer">
-						<Button>Join Staak now</Button>
+						<Button>Join staak now</Button>
 					</a>
 				</ContentStyled>
 			</ContainerStyled>

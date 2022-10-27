@@ -52,7 +52,7 @@ const Header: FC = () => {
 					<Button {...loginBtnProps}>Login</Button>
 				</a>
 				<a target="_blank" href={`${STAAK_URL}/register/company`} rel="noreferrer">
-					<Button {...joinBtnProps}>Join Staak</Button>
+					<Button {...joinBtnProps}>Join staak</Button>
 				</a>
 			</FlexBox>
 		</StyledHeader>

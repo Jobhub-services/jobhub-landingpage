@@ -69,10 +69,10 @@ const HeadPage: FC = () => {
 				<SubGlobalContainer justify="space-between">
 					<SImg src="assets/img/home/head-page-icon.svg" alt="" />
 					<SubContainer>
-						<TitleStyled>Find your next development talent on Staak</TitleStyled>
+						<TitleStyled>Find your next development talent on staak</TitleStyled>
 						<BlockBodyStyled>
-							Staak the easiest way to recruit software developers If you're an employer in need of top-notch talent? Or a job seeker looking for
-							work? Staak is your best software to get matched
+							staak the easiest way to recruit software developers If you're an employer in need of top-notch talent? Or a job seeker looking for
+							work? staak is your best software to get matched
 						</BlockBodyStyled>
 						<FlexBox justify="flex-start">
 							<a target="_blank" href={`${STAAK_URL}/register/company`} style={{ marginRight: '15px' }} rel="noreferrer">
@@ -81,7 +81,7 @@ const HeadPage: FC = () => {
 								</Button>
 							</a>
 							<a target="_blank" href={`${STAAK_URL}/register/developer`} rel="noreferrer">
-								<Button color="white">Join Staak & Code</Button>
+								<Button color="white">Join staak & Code</Button>
 							</a>
 						</FlexBox>
 					</SubContainer>

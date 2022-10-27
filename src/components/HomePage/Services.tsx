@@ -93,7 +93,7 @@ const Services = () => {
 					</CardIcon>
 					<CardTitle>Spend less time worrying about finding the perfect candidate</CardTitle>
 					<CardBody>
-						Staak will help you to create job in one minute and receive a thousand of application from professionals around the world.
+						staak will help you to create job in one minute and receive a thousand of application from professionals around the world.
 					</CardBody>
 				</CardService>
 				<CardService flexDirection="column">
@@ -101,7 +101,7 @@ const Services = () => {
 						<IconHalfTime size={50} color="#ffffff" />
 					</CardIcon>
 					<CardTitle>Hire efficiently and effectively</CardTitle>
-					<CardBody>Hiring process with Staak is easy and fast , and you can hire the best candidate in only one click.</CardBody>
+					<CardBody>Hiring process with staak is easy and fast , and you can hire the best candidate in only one click.</CardBody>
 				</CardService>
 				<CardService flexDirection="column">
 					<CardIcon>
